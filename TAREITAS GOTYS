@@ -1,1 +1,24 @@
+#include <stdio.h>
+
+int complemento_a_9(int n) {
+    int complemento = 0, multiplicador = 1;
+ 
+    while (n > 0) {
+ 
+        int digito = n % 10;
+        int complemento_digito = 9 - digito;
+        complemento += complemento_digito * multiplicador;
+        n /= 10;
+        multiplicador *= 10;
+    }
+    return complemento;
+}
+int main() {
+    int n;
+    printf("Ingresa un número entero: ");
+    scanf("%d", &n);
+ int resultado = complemento_a_9(n);
+    printf("El complemento a 9 de %d es: %d\n", n, resultado);
+    return 0;
+}
 
