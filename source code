@@ -1,0 +1,29 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float a, b, c, x1, x2, d;
+
+    printf("Ingrese los valores de a, b y c: ");
+    scanf("%f %f %f", &a, &b, &c);
+
+    d = b*b - 4*a*c;
+
+    if (d < 0)
+        printf("No hay soluciones reales.\n");
+    else {
+        x1 = (-b + sqrt(d)) / (2*a);
+        x2 = (-b - sqrt(d)) / (2*a);
+        printf("Las soluciones son:\n x1 = %.2f\n x2 = %.2f\n", x1, x2);
+    }
+
+    return 0;
+}

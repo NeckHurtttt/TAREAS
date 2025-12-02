@@ -1,0 +1,31 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main() {
+    int N, original, invertido = 0, digito;
+
+    printf("Ingrese un numero entero: ");
+    scanf("%d", &N);
+
+    original = N; 
+
+    while (N != 0) {
+        digito = N % 10;
+        invertido = invertido * 10 + digito;
+        N /= 10;
+    }
+
+    if (original == invertido)
+        printf("El numero es capicua.\n");
+    else
+        printf("El numero NO es capicua.\n");
+
+    return 0;
+}

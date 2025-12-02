@@ -1,0 +1,30 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main() {
+    int N, u, d, c, m;
+
+    printf("Ingrese un numero entero positivo menor que 10000: ");
+    scanf("%d", &N);
+
+    if (N < 0 || N >= 10000) {
+        printf("Error: el numero debe ser menor que 10000.\n");
+        return 0;
+    }
+
+    u = N % 10;
+    d = (N / 10) % 10;
+    c = (N / 100) % 10;
+    m = (N / 1000) % 10;
+
+    printf("Unidades: %d\nDecenas: %d\nCentenas: %d\nMillares: %d\n", u, d, c, m);
+
+    return 0;
+}

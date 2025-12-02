@@ -1,0 +1,29 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main() {
+    int dia, mes;
+
+    printf("Ingrese el dia: ");
+    scanf("%d", &dia);
+    printf("Ingrese el mes (1-12): ");
+    scanf("%d", &mes);
+
+    if ((mes == 9 && dia >= 21) || (mes == 12 && dia < 21) || (mes > 9 && mes < 12))
+        printf("Primavera\n");
+    else if ((mes == 12 && dia >= 21) || (mes == 3 && dia < 21) || (mes > 12 || mes < 3))
+        printf("Verano\n");
+    else if ((mes == 3 && dia >= 21) || (mes == 6 && dia < 21) || (mes > 3 && mes < 6))
+        printf("Otonio\n");
+    else
+        printf("Invierno\n");
+
+    return 0;
+}

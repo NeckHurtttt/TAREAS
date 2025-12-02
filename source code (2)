@@ -1,0 +1,31 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main() {
+    int h1, m1, s1, h2, m2, s2;
+    int t1, t2, dif, dh, dm, ds;
+
+    printf("Ingrese el primer horario (hh mm ss): ");
+    scanf("%d %d %d", &h1, &m1, &s1);
+    printf("Ingrese el segundo horario (hh mm ss): ");
+    scanf("%d %d %d", &h2, &m2, &s2);
+
+    t1 = h1 * 3600 + m1 * 60 + s1;
+    t2 = h2 * 3600 + m2 * 60 + s2;
+    dif = t2 - t1;
+
+    dh = dif / 3600;
+    dif %= 3600;
+    dm = dif / 60;
+    ds = dif % 60;
+
+    printf("Tiempo transcurrido: %d:%d:%d\n", dh, dm, ds);
+    return 0;
+}

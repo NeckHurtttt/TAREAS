@@ -1,0 +1,28 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int N, digito, pos = 0;
+    int complemento = 0;
+
+    printf("Ingrese un numero entero: ");
+    scanf("%d", &N);
+
+    while (N != 0) {
+        digito = N % 10;
+        complemento += (9 - digito) * pow(10, pos);
+        pos++;
+        N /= 10;
+    }
+
+    printf("El complemento a 9 es: %d\n", complemento);
+    return 0;
+}
